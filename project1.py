@@ -8,9 +8,9 @@ guess = 5
 while True:
    if (guess == x):
       print("Yay! You have guess it right")
+      break
    else:
-      print("Good luck next time")
-
-return 0
+      print("Good luck next time!") 
+      break
 
 
