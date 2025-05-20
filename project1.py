@@ -23,6 +23,26 @@ while playing:
         print('Invalid choice')
 
 #second
+#game 2
+#Roll a dice game
+import random
+choice = input("Do you want to play the game(y/n):").lower()
+playing = True
+
+
+while playing:
+   if choice == "y":
+      die1 = random.randint(1,6)
+      die2 = random.randint(1,6)
+      print(f"({die1},{die2})")
+      break
+
+   elif choice == "n":
+      print("Thank you for playing the game!") 
+      break
+   else:
+      print("Invalid choice.")
+      break
 
       
     
