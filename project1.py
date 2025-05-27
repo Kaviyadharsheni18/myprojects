@@ -1,25 +1,25 @@
-#Beginner level projects
-#game 1
-#Roll a dice game
+# #Beginner level projects
+# #game 1
+# #Roll a dice game
 
-import random
-choice = input("Do you want to play the game(y/n):").lower()
-playing = True
+# import random
+# choice = input("Do you want to play the game(y/n):").lower()
+# playing = True
 
 
-while playing:
-   if choice == "y":
-      die1 = random.randint(1,6)
-      die2 = random.randint(1,6)
-      print(f"({die1},{die2})")
-      break
+# while playing:
+#    if choice == "y":
+#       die1 = random.randint(1,6)
+#       die2 = random.randint(1,6)
+#       print(f"({die1},{die2})")
+#       break
 
-   elif choice == "n":
-      print("Thank you for playing the game!") 
-      break
-   else:
-      print("Invalid choice.")
-      break
+#    elif choice == "n":
+#       print("Thank you for playing the game!") 
+#       break
+#    else:
+#       print("Invalid choice.")
+#       break
 
 
 
@@ -39,6 +39,7 @@ while True:
           print("Too less")
        else:
           print("Yay! You guess it right")
+          break
     except ValueError:
        print("please enter a valid number:")
     
@@ -46,6 +47,7 @@ while True:
 #Rock, Paper, Scissors game 
 import random
 choices = ["rock", "paper", "scissors"]
+emojis = {'rock' : '🪨', 'paper' :'📜', 'scissor': '✂️'}
 while True:
     user_choice = input("Enter rock, paper, or scissors (or 'exit' to quit): ").lower()
     
@@ -57,8 +59,9 @@ while True:
         print("Invalid choice. Please try again.")
         continue
     
-    computer_choice = random.choice(choices)
-    print(f"Computer chose: {computer_choice}")
+    computer_choice = random.choice(emojis[choices])
+    print(f"Your choice: {emojis[user_choice]}")
+    print(f"Computer chose: {emojis[computer_choice]}")
     
     if user_choice == computer_choice:
         print("It's a tie!")
